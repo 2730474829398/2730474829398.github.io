@@ -1,13 +1,13 @@
 ---
 permalink: /
-title: "github page"
+title: "关于我"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+欢迎来到我的博客，我是K.W，白手起家非常不易，刚刚结束高中三年的苦B生活，即将踏入大学的校园，本人自认为是一个阳光开朗的17岁男孩，对编程有兴趣却缺少动力，能成功创建这个个人博客也是十分不易。爱好航空摄影，民航业和旗下所有附属产业。即将前往英国[布里斯托大学](https://www.bristol.ac.uk/)进行长达5年的[Computer Science](https://www.bristol.ac.uk/study/undergraduate/2026/computer-science/bsc-computer-science/)的深造，希望未来可以用学习到的皮毛知识推进民航业科技化发展，成立属于自己的一番小事业
 
 A data-driven personal website
 ======
