@@ -113,16 +113,68 @@
    ========================================================================== */
 
 .grid__item {
-  // ... 现有 .grid__item 样式 ...
-}
+  margin-bottom: 2em;
 
-// 新增代码从这里开始插入
-.archive__item-grid & { // 这一部分确保了新的grid__item样式只在archive__item-grid内部生效
-  @include breakpoint($medium) {
-    @include gallery(4 of 12);
+  .page__meta {
+    margin: 0 0 4px;
   }
-  @include breakpoint($large) {
-    @include gallery(4 of 12);
+
+  .archive__item-title {
+    margin-top: 0.5em;
+    font-size: $type-size-5;
+  }
+
+  .archive__item-excerpt {
+    display: none; /* 隐藏网格项目中的摘要，尤其适用于照片 */
+  }
+
+  @include breakpoint($small) {
+    // 对于较小屏幕（例如手机），可能显示2列
+    @include gallery(5 of 10); /* 原始的2列设置 */
+    .archive__item-teaser {
+      max-height: 200px;
+    }
+  }
+
+  @include breakpoint($medium) {
+    margin-left: 0; /* 在mixin操作之前重置 */
+    margin-right: 0; /* 在mixin操作之前重置 */
+    @include gallery(2.5 of 10); /* 原始的4列设置 */
+
+    // 在中等屏幕及以上显示每行3列
+    // 一个12列的网格系统，每行3个项目意味着每个项目占用4列 (12 / 3 = 4)
+    // 调整guttters，有效使用Susy的gallery mixin。
+    // 假设你的Susy设置中有一个12列的网格（来自 _themes.scss -> $susy）
+    // 对于12列网格中的3个项目，每个项目理想情况下应该是 span(4 of 12)
+    // gallery mixin 处理guttters。
+    @include gallery(3.33333333333333333333 of 10); /* 这需要根据你的具体Susy设置精确计算 */
+    // 假设是12列网格，每行3个项目，每个项目是4列宽。
+    // 如果你的 $susy 有 columns: 12，这会更容易。
+    // 而不是 `gallery(2.5 of 10)`，你可能需要一些能被3整除的东西。
+    // 让我们为特定的 ".archive__item-grid" 类进行覆盖
+    // 这更像是一种变通方法，可能需要根据你的确切Susy设置进行尝试和错误。
+    // 对于照片网格，更简单的方法通常是直接使用 flexbox 或 grid 的CSS。
+
+    .archive__item-teaser {
+      max-height: 180px; /* 根据需要调整高度以适应正方形或所需的宽高比 */
+      overflow: hidden; /* 确保图片适应 */
+    }
+
+    .archive__item-excerpt {
+      display: none; /* 照片网格保持隐藏 */
+    }
+  }
+
+  // 为你的特定照片网格添加新规则，以确保在更大屏幕上每行3个
+  // 我们将使用 photos.html 中的容器上的一个类来定位它
+  // 这将应用于 .archive__item-grid 内的 .grid__item
+  .archive__item-grid & {
+    @include breakpoint($medium) {
+      @include gallery(4 of 12); /* 这意味着在12列网格中，每个项目占用4列（12/3=4） */
+    }
+    @include breakpoint($large) {
+      @include gallery(4 of 12); /* 在大屏幕上保持每行3个 */
+    }
   }
 }
 
@@ -130,40 +182,40 @@
 .archive__item-grid {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -($grid-gutter); /* Adjust for left-most gutter if needed */
-  margin-right: -($grid-gutter); /* Adjust for right-most gutter if needed */
+  margin-left: -($grid-gutter); /* 如果需要，调整最左侧guttter */
+  margin-right: -($grid-gutter); /* 如果需要，调整最右侧guttter */
 
   .grid__item {
-    padding: $grid-gutter / 2; /* Half the gutter on each side for spacing */
-    flex: 0 0 calc(100% / 3); /* 3 items per row */
-    max-width: calc(100% / 3); /* 3 items per row */
-    box-sizing: border-box; /* Important for padding to not add to width */
+    padding: $grid-gutter / 2; /* 每边一半guttter用于间距 */
+    flex: 0 0 calc(100% / 3); /* 每行3个项目 */
+    max-width: calc(100% / 3); /* 每行3个项目 */
+    box-sizing: border-box; /* padding 不应增加宽度，这一点很重要 */
 
     @include breakpoint($small) {
-      flex: 0 0 calc(100% / 2); /* 2 items per row on small screens */
+      flex: 0 0 calc(100% / 2); /* 在小屏幕上每行2个项目 */
       max-width: calc(100% / 2);
     }
     @include breakpoint($medium) {
-      flex: 0 0 calc(100% / 3); /* 3 items per row on medium screens */
+      flex: 0 0 calc(100% / 3); /* 在中等屏幕上每行3个项目 */
       max-width: calc(100% / 3);
     }
     @include breakpoint($large) {
-      flex: 0 0 calc(100% / 3); /* 3 items per row on large screens */
+      flex: 0 0 calc(100% / 3); /* 在大屏幕上每行3个项目 */
       max-width: calc(100% / 3);
     }
 
     .archive__item-teaser {
-      width: 100%; /* Ensure image container takes full width of grid item */
-      height: 200px; /* Fixed height for image container, adjust as needed */
+      width: 100%; /* 确保图片容器占据网格项目的全部宽度 */
+      height: 200px; /* 图片容器的固定高度，根据需要调整 */
       overflow: hidden;
-      display: flex; /* Use flexbox to center image vertically/horizontally */
+      display: flex; /* 使用 flexbox 垂直/水平居中图片 */
       justify-content: center;
       align-items: center;
 
       img {
         width: 100%;
         height: auto;
-        object-fit: cover; /* Crop image to fit container without distortion */
+        object-fit: cover; /* 裁剪图片以适应容器，不失真 */
       }
     }
   }
