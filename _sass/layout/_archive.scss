@@ -113,40 +113,58 @@
    ========================================================================== */
 
 .grid__item {
-  margin-bottom: 2em;
+  // ... 现有 .grid__item 样式 ...
+}
 
-  .page__meta {
-    margin: 0 0 4px;
-  }
-
-  .archive__item-title {
-    margin-top: 0.5em;
-    font-size: $type-size-5;
-  }
-
-  .archive__item-excerpt {
-    display: none; /* Hide excerpt for grid items, especially for photos */
-  }
-
-  @include breakpoint($small) {
-    @include gallery(5 of 10);
-    .archive__item-teaser {
-      max-height: 200px;
-    }
-  }
-
+// 新增代码从这里开始插入
+.archive__item-grid & { // 这一部分确保了新的grid__item样式只在archive__item-grid内部生效
   @include breakpoint($medium) {
-    margin-left: 0; /* reset before mixin does its thing*/
-    margin-right: 0; /* reset before mixin does its thing*/
-    @include gallery(2.5 of 10);
+    @include gallery(4 of 12);
+  }
+  @include breakpoint($large) {
+    @include gallery(4 of 12);
+  }
+}
 
-    .archive__item-teaser {
-      max-height: 120px;
+/* 添加一个新类来专门控制照片的网格 */
+.archive__item-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -($grid-gutter); /* Adjust for left-most gutter if needed */
+  margin-right: -($grid-gutter); /* Adjust for right-most gutter if needed */
+
+  .grid__item {
+    padding: $grid-gutter / 2; /* Half the gutter on each side for spacing */
+    flex: 0 0 calc(100% / 3); /* 3 items per row */
+    max-width: calc(100% / 3); /* 3 items per row */
+    box-sizing: border-box; /* Important for padding to not add to width */
+
+    @include breakpoint($small) {
+      flex: 0 0 calc(100% / 2); /* 2 items per row on small screens */
+      max-width: calc(100% / 2);
+    }
+    @include breakpoint($medium) {
+      flex: 0 0 calc(100% / 3); /* 3 items per row on medium screens */
+      max-width: calc(100% / 3);
+    }
+    @include breakpoint($large) {
+      flex: 0 0 calc(100% / 3); /* 3 items per row on large screens */
+      max-width: calc(100% / 3);
     }
 
-    .archive__item-excerpt {
-      display: block;
-      font-size: $type-size-6;
+    .archive__item-teaser {
+      width: 100%; /* Ensure image container takes full width of grid item */
+      height: 200px; /* Fixed height for image container, adjust as needed */
+      overflow: hidden;
+      display: flex; /* Use flexbox to center image vertically/horizontally */
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Crop image to fit container without distortion */
+      }
     }
   }
 }
