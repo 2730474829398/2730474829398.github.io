@@ -1,7 +1,7 @@
 ---
 permalink: /
-title: "K.W"
-author_profile: true
+title: "K.W" 
+author_profile: true 
 redirect_from: 
   - /about/
   - /about.html
