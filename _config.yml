@@ -282,8 +282,7 @@ defaults:
     values:
       layout: talk
       author_profile: true
-      share: fause
-
+      share: true
 
 # Sass/SCSS
 sass:
