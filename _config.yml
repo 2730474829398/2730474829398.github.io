@@ -234,6 +234,13 @@ collections:
 defaults:
   # ... 现有默认值 ...
   # _portfolio
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true 
   - scope:
       path: ""
       type: portfolio
