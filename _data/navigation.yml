@@ -27,7 +27,7 @@ main:
     url: /cv/
 
   - title: "Photo"
-    url: /Photo/
+    url: /photos/
     
   # - title: "CV"
   #   url: /cv-json/
