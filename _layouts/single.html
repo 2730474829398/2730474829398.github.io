@@ -2,6 +2,10 @@
 layout: default
 ---
 
+---
+layout: default
+---
+
 {% include base_path %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
@@ -45,6 +49,26 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
+        {# 添加以下代码块来显示照片 #}
+        {% if page.collection == 'photos' %}
+          {% if page.header and page.header.teaser %}
+            {% assign image_path = page.header.teaser %}
+          {% elsif page.teaser %}
+            {% assign image_path = page.teaser %}
+          {% else %}
+            {% assign image_path = site.teaser %}
+          {% endif %}
+
+          {% if image_path %}
+            <figure class="page__hero">
+              <img src="{% if image_path contains "://" %}{{ image_path }}{% else %}{{ image_path | prepend: "/images/" | prepend: base_path }}{% endif %}" alt="{{ page.title | default: 'Photo' }}" class="page__hero-image">
+              {% if page.header.caption %}
+                <figcaption class="page__hero-caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
+              {% endif %}
+            </figure>
+          {% endif %}
+        {% endif %}
+        {# 照片显示代码块结束 #}
         {{ content }}
 
         {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
@@ -93,7 +117,7 @@ layout: default
     {% endif %}
   </article>
 
-  {% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}
+  {% comment %}{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}
     <div class="page__related">
       {% if site.data.ui-text[site.locale].related_label %}
