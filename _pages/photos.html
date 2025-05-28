@@ -29,11 +29,9 @@ author_profile: true
       <h2 class="archive__item-title" itemprop="headline">
         <a href="{{ base_path }}{{ photo.url }}" rel="permalink">{{ photo.title }}</a>
       </h2>
-      {#
       {% if photo.description %}
         <p class="archive__item-excerpt" itemprop="description">{{ photo.description }}</p>
       {% endif %}
-      #}
     </div>
   {% endfor %}
 </div>
