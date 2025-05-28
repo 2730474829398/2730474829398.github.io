@@ -10,39 +10,29 @@ author_profile: true
 <div class="archive__item-grid">
   {% for photo in site.photos %}
     <div class="grid__item">
-      {# 直接渲染图片，跳过 archive-single.html 中可能存在的复杂逻辑 #}
       {% if photo.header and photo.header.teaser %}
         {% assign image_path = photo.header.teaser %}
-      {% elsif photo.teaser %} {# 检查直接在 post 中定义的 teaser #}
+      {% elsif photo.teaser %}
         {% assign image_path = photo.teaser %}
       {% else %}
-        {% assign image_path = site.teaser %} {# 使用站点默认 teaser #}
+        {% assign image_path = site.teaser %}
       {% endif %}
 
       {% if image_path %}
         <div class="archive__item-teaser">
           <a href="{{ base_path }}{{ photo.url }}">
-            <img src="
-              {% if image_path contains "://" %}
-                {{ image_path }}
-              {% else %}
-                {{ image_path | prepend: "/images/" | prepend: base_path }}
-              {% endif %}
-            " alt="{{ photo.title | default: 'Photo' }}">
+            <img src="{% if image_path contains "://" %}{{ image_path }}{% else %}{{ image_path | prepend: "/images/" | prepend: base_path }}{% endif %}" alt="{{ photo.title | default: 'Photo' }}">
           </a>
         </div>
       {% endif %}
-      
+
       <h2 class="archive__item-title" itemprop="headline">
-        <a href="{{ base_path }}{{ photo.url }}" rel="permalink">{{ photo.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
+        <a href="{{ base_path }}{{ photo.url }}" rel="permalink">{{ photo.title }}</a>
       </h2>
-      {# 如果你想在这里显示其他元数据，比如日期或描述，可以添加类似下面的代码： #}
+      {# 如果你想在这里显示其他元数据，比如日期或描述，可以在这里添加相应代码 #}
       {#
-      {% if photo.date %}
-        <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {{ photo.date | date: '%B %d, %Y' }}</p>
-      {% endif %}
-      {% if photo.excerpt %}
-        <p class="archive__item-excerpt" itemprop="description">{{ photo.excerpt | markdownify }}</p>
+      {% if photo.description %}
+        <p class="archive__item-excerpt" itemprop="description">{{ photo.description }}</p>
       {% endif %}
       #}
     </div>
