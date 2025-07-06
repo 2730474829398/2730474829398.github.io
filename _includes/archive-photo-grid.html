@@ -1,0 +1,22 @@
+{% raw %}{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <a href="{{ base_path }}{{ post.url }}" rel="permalink">
+      {% if teaser %}
+        <div class="archive__item-teaser">
+          <img src="{{ teaser | prepend: base_path }}" alt="{{ post.title }}">
+        </div>
+      {% endif %}
+      <h3 class="archive__item-title" itemprop="headline">
+          {{ post.title }}
+      </h3>
+    </a>
+  </article>
+</div>{% endraw %}

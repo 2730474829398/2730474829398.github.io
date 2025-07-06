@@ -5,10 +5,10 @@ permalink: /photos/
 author_profile: true
 ---
 
-{% include base_path %}
+{% raw %}{% include base_path %}
 
 <div class="grid__wrapper">
-  {% for post in site.photos %}
-    {% include archive-single.html type="grid" %}
+  {% for post in site.photos reversed %}
+    {% include archive-photo-grid.html %}
   {% endfor %}
-</div>
+</div>{% endraw %}
