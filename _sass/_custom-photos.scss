@@ -36,3 +36,42 @@
     font-weight: bold;
   }
 }
+
+/* 解决照片详情页图片缩放问题 */
+.page__content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 新增的照片详情页样式 */
+.photo-detail__image {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.photo-detail__image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo-detail__info {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.photo-detail__info p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.photo-detail__info strong {
+  color: #333;
+}

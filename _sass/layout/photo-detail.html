@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="page__inner-wrap">
+      <header>
+        <h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
+        <p class="page__meta">
+          <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published: <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        </p>
+      </header>
+
+      <section class="page__content" itemprop="text">
+        <div class="photo-detail__image">
+          <img src="{{ page.header.teaser | prepend: base_path }}" alt="{{ page.title }}">
+        </div>
+
+        <div class="photo-detail__info">
+          <p><strong>拍摄日期:</strong> {{ page.shooting_date | date: "%Y年%m月%d日" }}</p>
+          <p><strong>拍摄地点:</strong> {{ page.location }}</p>
+          <p><strong>航班号:</strong> {{ page.flight_number }}</p>
+          <p><strong>航段:</strong> {{ page.route }}</p>
+        </div>
+
+        {{ content }}
+      </section>
+
+      <footer class="page__meta">
+        {% include page__taxonomy.html %}
+      </footer>
+    </div>
+  </article>
+</div>
