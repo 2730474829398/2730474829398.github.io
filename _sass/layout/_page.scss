@@ -105,6 +105,16 @@
     margin-top: -1.5em;
     padding-left: 1.25rem;
   }
+  
+  /* Add this block to fix image scaling in posts */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 7px; /* Optional: adds rounded corners */
+  }
 }
 
 .page__hero {
