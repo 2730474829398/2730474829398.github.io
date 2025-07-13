@@ -1,0 +1,16 @@
+---
+layout: archive
+title: "Photos"
+permalink: /photos/
+author_profile: true
+---
+
+{% include base_path %}
+
+<div class="archive__item-grid">
+  {% for photo in site.photos %}
+    <div class="grid__item">
+      {% include archive-single.html type="grid" post=photo %}
+    </div>
+  {% endfor %}
+</div>

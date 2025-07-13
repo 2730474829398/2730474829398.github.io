@@ -139,6 +139,48 @@
   }
 }
 
+.archive__item-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -($grid-gutter); /* 如果需要，调整最左侧guttter */
+  margin-right: -($grid-gutter); /* 如果需要，调整最右侧guttter */
+
+  .grid__item {
+    padding: $grid-gutter / 2; /* 每边一半guttter用于间距 */
+    flex: 0 0 calc(100% / 3); /* 每行3个项目 */
+    max-width: calc(100% / 3); /* 每行3个项目 */
+    box-sizing: border-box; /* padding 不应增加宽度，这一点很重要 */
+
+    @include breakpoint($small) {
+      flex: 0 0 calc(100% / 2); /* 在小屏幕上每行2个项目 */
+      max-width: calc(100% / 2);
+    }
+    @include breakpoint($medium) {
+      flex: 0 0 calc(100% / 3); /* 在中等屏幕上每行3个项目 */
+      max-width: calc(100% / 3);
+    }
+    @include breakpoint($large) {
+      flex: 0 0 calc(100% / 3); /* 在大屏幕上每行3个项目 */
+      max-width: calc(100% / 3);
+    }
+
+    .archive__item-teaser {
+      width: 100%; /* 确保图片容器占据网格项目的全部宽度 */
+      height: 200px; /* 图片容器的固定高度，根据需要调整 */
+      overflow: hidden;
+      display: flex; /* 使用 flexbox 垂直/水平居中图片 */
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* 裁剪图片以适应容器，不失真 */
+      }
+    }
+  }
+}
+
 
 /*
    Features
