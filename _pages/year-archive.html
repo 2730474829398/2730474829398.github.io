@@ -1,0 +1,18 @@
+---
+layout: archive
+permalink: /year-archive/
+title: "Blog posts"
+author_profile: true
+redirect_from:
+  - /wordpress/blog-posts/
+---
+
+{% include base_path %}
+{% assign posts_by_year = site.posts | group_by_exp: 'post', "post.date | date: '%Y'" %}
+{% assign posts_by_year = posts_by_year | sort: 'name' | reverse %}
+{% for year in posts_by_year %}
+  <h2 id="{{ year.name | slugify }}" class="archive__subtitle">{{ year.name }}</h2>
+  {% for post in year.items %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endfor %}

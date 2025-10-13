@@ -1,0 +1,34 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <a href="{{ base_path }}{{ post.url }}" rel="permalink">
+      {% if teaser %}
+        {% assign teaser_url = teaser %}
+        {% unless teaser_url contains "://" %}
+          {% assign teaser_url = teaser_url | prepend: base_path %}
+        {% endunless %}
+        {% assign teaser_thumb = teaser_url %}
+        {% if teaser_thumb contains "aliyuncs.com" %}
+          {% if teaser_thumb contains "?" %}
+            {% assign teaser_thumb = teaser_thumb | append: "&x-oss-process=image/resize,w_480" %}
+          {% else %}
+            {% assign teaser_thumb = teaser_thumb | append: "?x-oss-process=image/resize,w_480" %}
+          {% endif %}
+        {% endif %}
+        <div class="archive__item-teaser">
+          <img src="{{ teaser_thumb }}" data-original="{{ teaser_url }}" onerror="if(!this.dataset.retry){this.dataset.retry=1;this.src=this.dataset.original;}" alt="{{ post.title }}" loading="lazy" decoding="async">
+        </div>
+      {% endif %}
+      <h3 class="archive__item-title" itemprop="headline">
+          {{ post.title }}
+      </h3>
+    </a>
+  </article>
+</div>
