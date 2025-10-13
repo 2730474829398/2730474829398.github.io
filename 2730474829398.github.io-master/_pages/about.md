@@ -15,4 +15,4 @@ redirect_from:
 
 访客地图
 ======
-<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=9S-VO-aiVfmkTKWjsWsBNjucoxNu1t4a3y4zjTjLx6Y&cl=ffffff&w=a"></script>
+<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=v2xQlL28U_3eSpAt35Rl0aqYygklCOXOX4nkS3WXtW8&cl=ffffff&w=a"></script>
