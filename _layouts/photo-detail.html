@@ -48,7 +48,7 @@ layout: default
 
         <div class="photo-detail__info">
           {% if page.shooting_date %}
-            <p><strong>Shooting Date:</strong> {{ page.shooting_date | date: "%Y年%m月%d日" }}</p>
+            <p><strong>Shooting Date:</strong> {{ page.shooting_date | date: "%Y.%m.%d" }}</p>
           {% endif %}
           {% if page.location %}
             <p><strong>Location:</strong> {{ page.location }}</p>
