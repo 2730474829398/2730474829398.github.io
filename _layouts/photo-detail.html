@@ -56,8 +56,17 @@ layout: default
           {% if page.flight_number %}
             <p><strong>航班号:</strong> {{ page.flight_number }}</p>
           {% endif %}
-          {% if page.route %}
-            <p><strong>航段:</strong> {{ page.route }}</p>
+          {% if page.origin_destination %}
+            <p><strong>起降地:</strong> {{ page.origin_destination }}</p>
+          {% endif %}
+          {% if page.registration_number %}
+            <p><strong>注册号:</strong> {{ page.registration_number }}</p>
+          {% endif %}
+          {% if page.aircraft_type %}
+            <p><strong>机型:</strong> {{ page.aircraft_type }}</p>
+          {% endif %}
+          {% if page.livery %}
+            <p><strong>涂装:</strong> {{ page.livery }}</p>
           {% endif %}
         </div>
 
