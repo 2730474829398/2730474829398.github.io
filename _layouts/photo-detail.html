@@ -56,6 +56,9 @@ layout: default
           {% if page.flight_number %}
             <p><strong>航班号:</strong> {{ page.flight_number }}</p>
           {% endif %}
+           {% if page.livery %}
+            <p><strong>航司:</strong> {{ page.airline }}</p>
+          {% endif %}
           {% if page.origin_destination %}
             <p><strong>起降地:</strong> {{ page.origin_destination }}</p>
           {% endif %}
