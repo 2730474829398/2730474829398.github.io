@@ -48,28 +48,28 @@ layout: default
 
         <div class="photo-detail__info">
           {% if page.shooting_date %}
-            <p><strong>拍摄日期:</strong> {{ page.shooting_date | date: "%Y年%m月%d日" }}</p>
+            <p><strong>Shooting Date:</strong> {{ page.shooting_date | date: "%Y年%m月%d日" }}</p>
           {% endif %}
           {% if page.location %}
-            <p><strong>拍摄地点:</strong> {{ page.location }}</p>
+            <p><strong>Location:</strong> {{ page.location }}</p>
           {% endif %}
           {% if page.flight_number %}
-            <p><strong>航班号:</strong> {{ page.flight_number }}</p>
+            <p><strong>Flight Number:</strong> {{ page.flight_number }}</p>
           {% endif %}
            {% if page.livery %}
-            <p><strong>航司:</strong> {{ page.airline }}</p>
+            <p><strong>Route:</strong> {{ page.airline }}</p>
           {% endif %}
           {% if page.origin_destination %}
-            <p><strong>起降地:</strong> {{ page.origin_destination }}</p>
+            <p><strong>Origin/Destination:</strong> {{ page.origin_destination }}</p>
           {% endif %}
           {% if page.registration_number %}
-            <p><strong>注册号:</strong> {{ page.registration_number }}</p>
+            <p><strong>Registration Number:</strong> {{ page.registration_number }}</p>
           {% endif %}
           {% if page.aircraft_type %}
-            <p><strong>机型:</strong> {{ page.aircraft_type }}</p>
+            <p><strong>Aircraft Type:</strong> {{ page.aircraft_type }}</p>
           {% endif %}
           {% if page.livery %}
-            <p><strong>涂装:</strong> {{ page.livery }}</p>
+            <p><strong>Livery:</strong> {{ page.livery }}</p>
           {% endif %}
         </div>
 
