@@ -48,7 +48,6 @@ The Concorde preserved at Aerospace Bristol, registered G-BOAF, first flew from 
 Standing Before a Legend
 ======
 Seeing the Concorde for the first time was truly breathtaking. Its long, aerodynamic shape exudes the essence of flight efficiency. The landing gear and four underwing Rolls-Royce engines reflect its immense power.
-![Concorde_gear](https://kw-aviation.oss-cn-beijing.aliyuncs.com/post%20image/BP2/BP2_concorde_gear.jpg)
 
 Inside, the blue interior and 2-2 seat layout embody British Airways’ luxurious 1970s design.
 ![cabin](https://kw-aviation.oss-cn-beijing.aliyuncs.com/post%20image/BP2/BP2_concorde_cabin.jpg)
