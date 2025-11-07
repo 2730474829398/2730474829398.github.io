@@ -12,15 +12,20 @@
   {% assign title = post.title %}
 {% endif %}
 
-{% if teaser %}
-  {% assign teaser_url = teaser %}
-  {% unless teaser_url contains "://" %}
-    {% assign teaser_url = teaser_url | prepend: base_path %}
-  {% endunless %}
-  <div class="archive__item-teaser">
-    <img src="{{ teaser_url }}" alt="" loading="lazy" decoding="async">
-  </div>
-{% endif %}
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src=
+          {% if teaser contains "://" %}
+            "{{ teaser }}"
+          {% else %}
+            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+          {% endif %}
+          alt="">
+      </div>
+    {% endif %}
 
     <h2 class="archive__item-title" itemprop="headline">
       {% if post.link %}
