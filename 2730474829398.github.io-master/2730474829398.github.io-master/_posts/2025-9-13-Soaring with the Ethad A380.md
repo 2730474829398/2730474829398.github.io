@@ -1,0 +1,52 @@
+---
+title: 'Soaring with the Etihad A380: My Journey to the UK'
+date: 2025-09-13
+permalink: /posts/2012/08/Soaring with the Etihad A380 My Journey to the UK/
+tags:
+  - Etihad Airways
+  - EY889
+  - EY61
+  - Abu Dhabi
+---
+
+On September 12th, as a prospective international student bound for the University of Bristol, I embarked on my solo journey to the United Kingdom. The direct distance from Beijing, China's capital, to London, the UK's capital, is 12,300 kilometers—a direct flight of about 11 hours. However, for this trip, I chose to fly with Etihad Airways, transiting through Abu Dhabi, the capital of the UAE, on my way from Beijing to London Heathrow.
+
+My journey was split into two legs: flight EY889 from Beijing Daxing (PKX) to Abu Dhabi (AUH), an 8-hour and 35-minute flight, followed by flight EY61 from AUH to London Heathrow (LHR) for another 7 hours. Both flights were operated by Etihad, the UAE's flag carrier. As one of the "Middle East Big 3" airlines, this was my first time flying with them, and I was incredibly excited.
+
+Beijing to Abu Dhabi on the Dreamliner (EY889)
+======
+
+The first leg, EY889, is a regular on the Beijing route. It was operated by a Boeing 787-9 (registration A6-BLZ), which is 6.3 years old. As I boarded, I was immediately struck by the cabin's unique and exotic Middle Eastern design. At 19:15, we pushed back from gate 183 at Beijing Daxing and took off from runway 11L. Dinner was served about an hour after departure.
+![A6-BLZ Boing787-9](https://kw-aviation.oss-cn-beijing.aliyuncs.com/personal_blog/blog_post/blog_post_1/EY889-A6-BLZ.jpg)
+
+A highlight of this flight came after I had rested. My flight logbook, which I had politely handed to the flight attendants before takeoff, was returned to me. The captain had filled it out with great care and even included a kind greeting card with well wishes. We landed at Abu Dhabi's Zayed International Airport at 00:04 (UAE time), one minute ahead of schedule, docking at the beautiful new Terminal A. The first leg was a perfect success.
+![flightlog](https://kw-aviation.oss-cn-beijing.aliyuncs.com/personal_blog/blog_post/blog_post_1/EY889-flightlog.jpg)
+
+A Smooth Transit in Abu Dhabi
+======
+
+I had a 2-hour and 15-minute layover in Abu Dhabi. As the capital's sole international airport, it's a major global hub, and the transit process was incredibly smooth. With plenty of customs and security counters open, I was through it all and into the main departure hall in less than 20 minutes. It was there, at the gate, that I got my first look at the aircraft for my next flight.
+![transit in AUH](https://kw-aviation.oss-cn-beijing.aliyuncs.com/personal_blog/blog_post/blog_post_1/AUH-transit.jpg)
+
+Leg 2: The Main Event – Soaring on the A380 (EY61)
+======
+
+My connecting flight, EY61, was operated by an Airbus A380-800, registration A6-API. At 8.6 years old, she's one of only seven A380s in Etihad's fleet and a frequent flyer on the Abu Dhabi-London route.
+![A6-API Airbus380](https://kw-aviation.oss-cn-beijing.aliyuncs.com/personal_blog/blog_post/blog_post_1/EY61-A6-API.jpg)
+
+We departed at 02:50 UAE time. After a smooth flight of 6 hours and 59 minutes, we landed at London Heathrow at 06:50, ten minutes ahead of schedule. But the most amazing part of the journey came after we parked.
+![TV](https://kw-aviation.oss-cn-beijing.aliyuncs.com/personal_blog/blog_post/blog_post_1/EY61-TV.jpg)
+
+When the captain kindly handed back my flight log, he invited me to visit the cockpit! This was my first time ever stepping into a cockpit, and to have that first time be on the A380—the world's largest passenger aircraft—was simply unbelievable. The captain was incredibly welcoming. He asked me about my own flying experiences and even took a photo of me sitting in the pilot's seat.
+![cockpit](https://kw-aviation.oss-cn-beijing.aliyuncs.com/personal_blog/blog_post/blog_post_1/EY61-cockpit.jpg)
+
+
+An Unforgettable Journey
+======
+
+This entire 18-hour intercontinental journey was beyond exciting. I finally got to experience one of the Middle East Big 3, I flew on the magnificent (and increasingly rare) A380 again, and I received a priceless cockpit visit and a photo I will treasure for a lifetime.
+
+It was a true honor to fly with Etihad. I've already booked my return flight with them for my winter holiday, and I’m keeping my fingers crossed that I'll be on the A380 once more.
+
+See you again in January, Etihad!
+-------
